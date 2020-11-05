@@ -5,6 +5,8 @@
 using namespace cv;
 using namespace std;
 
+string filename = "/home/chrisliu/NewDisk/ROSws/img_ws/src/img_extract/catch_imgs/";
+
 int main()
 {
     VideoCapture inputVideo(1);
@@ -27,7 +29,7 @@ int main()
         if (key == 27)break;
         if (key == 'q' || key == 'Q')
         {
-            imgname = "/home/chrisliu/NewDisk/ROSws/img_ws/src/img_extract/catch_imgs/" + to_string(f++) + ".jpg";
+            imgname = filename + to_string(f++) + ".jpg";
             imwrite(imgname, frame);
         }
     }
